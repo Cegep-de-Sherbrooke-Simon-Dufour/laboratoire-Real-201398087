@@ -1,0 +1,16 @@
+joueurs.add(new Joueur("John wick", "john.wick@email.com", R.drawable.a));
+        joueurs.add(new Joueur("Robert j", "robert.j@email.com", R.drawable.b));
+        joueurs.add(new Joueur("James Gunn", "james.gunn@email.com", R.drawable.c));
+        joueurs.add(new Joueur("Ricky tales", "rickey.tales@email.com", R.drawable.d));
+        joueurs.add(new Joueur("Micky mose", "mickey.mouse@email.com", R.drawable.e));
+        joueurs.add(new Joueur("Pick War", "pick.war@email.com", R.drawable.f));
+        joueurs.add(new Joueur("Leg piece", "leg.piece@email.com", R.drawable.g));
+        joueurs.add(new Joueur("Apple Mac", "apple.mac@email.com", R.drawable.g));
+        joueurs.add(new Joueur("John wick", "john.wick@email.com", R.drawable.a));
+        joueurs.add(new Joueur("Robert j", "robert.j@email.com", R.drawable.b));
+        joueurs.add(new Joueur("James Gunn", "james.gunn@email.com", R.drawable.c));
+        joueurs.add(new Joueur("Ricky tales", "rickey.tales@email.com", R.drawable.d));
+        joueurs.add(new Joueur("Micky mose", "mickey.mouse@email.com", R.drawable.e));
+        joueurs.add(new Joueur("Pick War", "pick.war@email.com", R.drawable.f));
+        joueurs.add(new Joueur("Leg piece", "leg.piece@email.com", R.drawable.g));
+        joueurs.add(new Joueur("Apple Mac", "apple.mac@email.com", R.drawable.g));

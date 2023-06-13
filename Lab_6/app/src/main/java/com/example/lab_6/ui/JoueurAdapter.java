@@ -1,4 +1,4 @@
-package com.example.lab_6;
+package com.example.lab_6.ui;
 
 
 import android.view.LayoutInflater;
@@ -12,17 +12,18 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lab_6.Info.Joueur;
+import com.example.lab_6.R;
 
 
-public class MyAdaptater extends ListAdapter<Joueur, MyAdaptater.MyViewHolder> {
 
-    private RecyclerCallback<Joueur> callback;
+public class JoueurAdapter extends ListAdapter<Joueur, JoueurAdapter.MyViewHolder> {
 
-    public void setCallback(RecyclerCallback<Joueur> callback){ this.callback = callback;}
-    public MyAdaptater() {
+
+    public JoueurAdapter() {
         super(new DiffUtil.ItemCallback<Joueur>() {
             @Override
-            public boolean areItemsTheSame(Joueur oldUser, Joueur newUser) {
+            public boolean areItemsTheSame(@NonNull Joueur oldUser,@NonNull Joueur newUser) {
                 return oldUser.getNom() == newUser.getNom();
             }
 
@@ -33,7 +34,7 @@ public class MyAdaptater extends ListAdapter<Joueur, MyAdaptater.MyViewHolder> {
         });
 
     }
-
+    @NonNull
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.bind(getItem(position));
@@ -57,9 +58,7 @@ public class MyAdaptater extends ListAdapter<Joueur, MyAdaptater.MyViewHolder> {
             nomView=itemView.findViewById(R.id.nom);
             courrielView=itemView.findViewById(R.id.courriel);
             imageView=itemView.findViewById(R.id.imageview);
-            itemView.setOnClickListener(view -> {
-                callback.returnValue(joueurs);
-            });
+
         }
         public void bind(Joueur joueurs) {
             this.joueurs = joueurs;
