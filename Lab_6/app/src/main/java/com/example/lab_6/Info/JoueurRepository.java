@@ -15,14 +15,15 @@ public class JoueurRepository {
     @Inject
     public JoueurRepository() {}
     private final ArrayList<Joueur> joueurs = new ArrayList<>();
-    private final MutableLiveData<List<Joueur>> joueursLiveData = new MutableLiveData<>(joueurs);
+    private final MutableLiveData<List<Joueur>> joueursLiveData = new MutableLiveData<>(new ArrayList<>(joueurs));
 
     public void addJoueur(Joueur joueur) {
         joueurs.add(joueur);
-        joueursLiveData.setValue(joueurs);
+        joueursLiveData.setValue(new ArrayList<>(joueurs));
     }
     public void deleteJoueur(Joueur joueur) {
         joueurs.remove(joueur);
+        joueursLiveData.setValue(new ArrayList<>(joueurs));
     }
     public LiveData<List<Joueur>> getLiveDataJoueurs() {return joueursLiveData; }
 

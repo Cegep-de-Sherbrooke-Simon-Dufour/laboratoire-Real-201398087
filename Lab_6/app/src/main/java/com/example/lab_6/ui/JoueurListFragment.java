@@ -19,6 +19,7 @@ import com.example.lab_6.Info.Joueur;
 import com.example.lab_6.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -49,7 +50,16 @@ public class JoueurListFragment extends Fragment {
             public void onChanged(List<Joueur> joueurs) {
                 adapter.submitList(joueurs);
             }
+
         });
+
+
+        adapter.setCallback(object -> {
+            viewModel.deleteJoueur(object);
+
+        });
+
+
 
         button.setOnClickListener(v -> {
             Navigation.findNavController(view).navigate(R.id.action_joueurListFragment_to_addJoueurFragment);

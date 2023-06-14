@@ -10,25 +10,25 @@
     <EditText
         android:id="@+id/courriel"
         android:layout_width="318dp"
-        android:layout_height="55dp"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
-        android:text="Courriel :"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nom" />
+        app:layout_constraintTop_toBottomOf="@+id/nom"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/nom"
         android:layout_width="323dp"
-        android:layout_height="57dp"
+        android:layout_height="60dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Nom :"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btAnnuler"
@@ -51,4 +51,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btAnnuler"
         app:layout_constraintTop_toBottomOf="@+id/courriel" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nom :"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/nom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Courriel :"
+        app:layout_constraintEnd_toStartOf="@+id/courriel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

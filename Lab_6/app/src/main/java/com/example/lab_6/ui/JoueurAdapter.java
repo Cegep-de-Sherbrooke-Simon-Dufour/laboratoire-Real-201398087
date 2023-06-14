@@ -13,13 +13,15 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lab_6.Info.Joueur;
+import com.example.lab_6.Info.RecyclerCallback;
 import com.example.lab_6.R;
 
 
 
 public class JoueurAdapter extends ListAdapter<Joueur, JoueurAdapter.MyViewHolder> {
 
-
+    private RecyclerCallback<Joueur> callback;
+    public void setCallback(RecyclerCallback<Joueur> callback){ this.callback = callback;}
     public JoueurAdapter() {
         super(new DiffUtil.ItemCallback<Joueur>() {
             @Override
@@ -55,10 +57,13 @@ public class JoueurAdapter extends ListAdapter<Joueur, JoueurAdapter.MyViewHolde
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             nomView=itemView.findViewById(R.id.nom);
             courrielView=itemView.findViewById(R.id.courriel);
             imageView=itemView.findViewById(R.id.imageview);
-
+            itemView.setOnClickListener(view -> {
+                callback.returnValue(joueurs);
+            });
         }
         public void bind(Joueur joueurs) {
             this.joueurs = joueurs;

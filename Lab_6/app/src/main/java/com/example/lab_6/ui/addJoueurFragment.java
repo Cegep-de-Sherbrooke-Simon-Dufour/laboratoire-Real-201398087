@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.lab_6.Info.Joueur;
 import com.example.lab_6.R;
 
 
@@ -36,12 +37,11 @@ public class addJoueurFragment extends Fragment {
 
         EditText nom = view.findViewById(R.id.nom);
         EditText courriel = view.findViewById(R.id.courriel);
-        String nomAjout = nom.getText().toString();
-        String courrielAjout = courriel.getText().toString();
+
 
         Button btajouter = view.findViewById(R.id.btAjouter);
         btajouter.setOnClickListener(v-> {
-            viewModel.addJoueur(nomAjout, courrielAjout);
+            viewModel.addJoueur(nom.getText().toString(), courriel.getText().toString());
             Navigation.findNavController(view).navigateUp();
         });
         Button annuler = view.findViewById(R.id.btAnnuler);
