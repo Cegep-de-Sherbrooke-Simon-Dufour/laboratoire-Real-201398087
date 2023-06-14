@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/joueurListFragment">
+
+    <fragment
+        android:id="@+id/joueurListFragment"
+        android:name="com.example.lab_6.ui.JoueurListFragment"
+        android:label="fragment_joueur_list"
+        tools:layout="@layout/fragment_joueur_list" >
+        <action
+            android:id="@+id/action_joueurListFragment_to_addJoueurFragment"
+            app:destination="@id/addJoueurFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addJoueurFragment"
+        android:name="com.example.lab_6.ui.addJoueurFragment"
+        android:label="addJoueurFragment" />
+</navigation>

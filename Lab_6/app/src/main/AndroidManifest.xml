@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lab_6">
     <application
+        android:name=".JoueurApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -9,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab_6">
         <activity
-            android:name=".NouveauxJoueur"
-            android:exported="false" />
-        <activity
-            android:name=".RecycleView"
+            android:name=".ui.MainActivity"
             android:exported="true" >
 
 

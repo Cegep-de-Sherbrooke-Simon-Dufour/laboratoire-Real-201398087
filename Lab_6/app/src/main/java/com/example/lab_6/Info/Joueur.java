@@ -1,4 +1,6 @@
-package com.example.lab_6;
+package com.example.lab_6.Info;
+
+import com.example.lab_6.R;
 
 import java.util.Objects;
 
