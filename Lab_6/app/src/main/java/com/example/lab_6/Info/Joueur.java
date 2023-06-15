@@ -1,28 +1,53 @@
 package com.example.lab_6.Info;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.example.lab_6.R;
 
 import java.util.Objects;
+import java.util.concurrent.Executors;
 
-public class Joueur {
+@Entity
+public class Joueur  {
 
 
-    private String nom;
-   private String courriel;
-   int image;
+    public int imgPerso = photo();
+        @PrimaryKey(autoGenerate = true)
+        public int joueur_id;
 
-    public Joueur(String nom, String courriel, int image) {
+        @ColumnInfo(name = "nom")
+        public String nom;
+        @ColumnInfo(name = "courriel")
+        public String courriel;
+        @ColumnInfo(name = "image")
+        public int image;
 
-        this.nom = nom;
-        this.courriel = courriel;
-        this.image = image;
+
+
+public int photo(){
+    int img = getPrevPhoto();
+    if(img<R.drawable.h){
+        img = (img+100);
+
+    }else{
+        img = R.drawable.a;
     }
+    return img;
+}
+
+    private int getPrevPhoto() {
+        return JoueurRepository.getPrevPhoto();
+    }
+
 
     public Joueur(String nom, String courriel) {
 
         this.nom = nom;
         this.courriel = courriel;
-        this.image = R.drawable.a;
+        this.image = imgPerso;
+
 
     }
 
