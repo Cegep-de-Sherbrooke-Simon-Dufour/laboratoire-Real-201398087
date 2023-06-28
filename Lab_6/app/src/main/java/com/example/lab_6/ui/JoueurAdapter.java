@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lab_6.Info.Joueur;
-import com.example.lab_6.Info.RecyclerCallback;
 import com.example.lab_6.R;
 
 
